@@ -1,0 +1,14 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+<link rel="stylesheet" media="screen" href="{% static "rango/about.css" %}" type="text/css">
+{% block title %}About{% endblock %}
+{% block body_block %}
+    <h1>Hi, loser</h1>
+    Rango doesn't tell any shit... coz he doesn't give a fuck<br>
+    {% if visits == 1 %}
+        <strong>And only you know this</strong><br>
+    {% else %}
+        <strong>{{ visits }} people know this</strong><br>
+    {% endif %}
+    <img src="{% static "rango/images/rango.jpg" %}" alt="another picture of Rango">
+{% endblock %}

@@ -25,17 +25,11 @@ class MyRegistrationView(RegistrationView):
     def get_success_url(self, user=None):
         return '/rango/'
 
-
-class MyChangePasswordView(RegistrationView):
-    def get_success_url(self, user=None):
-        return 'rango/'
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('rango/', include('rango.urls')),
-    path('accounts/', include('registration.backends.simple.urls')),
     path('accounts/register/', MyRegistrationView.as_view(), name='registration_register'),
-    path('password/change/', MyChangePasswordView.as_view(), name='change_password')
+    path('accounts/', include('registration.backends.simple.urls')),
 ]
 
 if settings.DEBUG:

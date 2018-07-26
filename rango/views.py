@@ -151,4 +151,4 @@ def user_logout(request):
 
 @login_required
 def restricted(request):
-    return HttpResponse("since you're logging in, you are a good boy!")
+    return HttpResponse("since you're logged in, you are a good boy!")

@@ -13,8 +13,10 @@
     {% endif %}
     <div>Behold some hierarchy</div>
 
-    <div>
-        <h2>The most liked categories</h2>
+    <div class="panel panel-primary">
+         <div class="panel-heading">
+             <h4>The most liked categories</h4>
+         </div>
         {% if categories_most_liked %}
             <ul>
                 {% for category in categories_most_liked %}
@@ -25,9 +27,10 @@
             <strong>There is no category here</strong>
         {% endif %}
     </div>
-
-    <div>
-        <h2>The most viewed pages</h2>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4>The most viewed pages</h4>
+        </div>
         {% if pages_most_viewed %}
             <ul>
                 {% for page in pages_most_viewed %}

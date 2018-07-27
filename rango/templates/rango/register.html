@@ -2,16 +2,13 @@
 {% load staticfiles %}
 {% block title %}Registration{% endblock %}
 {% block body_block %}
-     <div class="page-header">
-        <h1>Register with Rango</h1>
-     </div>
     {% if registered %}
-        Rango says: <strong>thanks for registering!</strong><br>
+        <h2 class="form-signin-heading">Rango says: thanks for registering!</h2><br>
         <a href="{% url 'rango:index'%}">Home</a>
     {% else %}
-        Rango says: <strong>registering here!</strong>
-        <form id="user_form" method="post" enctype="multipart/form-data">
+        <form role="form"  method="post" action=".">
             {% csrf_token %}
+            <h2 class="form-signin-heading">Rango says: Sign Up Here</h2>
             {{ user_form.as_p }}
             {{ profile_form.as_p }}
             <input type="submit" name="submit" value="Register">

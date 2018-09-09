@@ -25,6 +25,7 @@ class MyRegistrationView(RegistrationView):
     def get_success_url(self, user=None):
         return '/rango/'
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('rango/', include('rango.urls')),
